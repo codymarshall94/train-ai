@@ -1,7 +1,6 @@
-import React from 'react'
+import Landing from "@/pages/landing/Landing";
+import React from "react";
 
 export default function LandingPage() {
-  return (
-    <div>LandingPage</div>
-  )
+  return <Landing />;
 }
