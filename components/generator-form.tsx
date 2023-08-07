@@ -125,14 +125,16 @@ export default function GeneratorForm({
       <div className="flex justify-between pb-4 lg:px-8">
         <Button onClick={handleBack}>{step === 1 ? "Exit" : "Back"}</Button>
         {inReview ? (
-          <Button
-            className="bg-gradient-to-r from-pink-700 to-blue-300 hover:from-pink-500 hover:to-blue-200 transition text-white font-semibold"
-            onClick={handleGeneratePlan}
-          >
+          <Button className="bg-[#644FF6] hover:bg-[#795be6]" onClick={handleGeneratePlan}>
             Generate
           </Button>
         ) : (
-          <Button onClick={handleNext}>Next</Button>
+          <Button
+            onClick={handleNext}
+            disabled={!form[currentStepKey.formName as keyof typeof form]}
+          >
+            Next
+          </Button>
         )}
       </div>
     </div>
