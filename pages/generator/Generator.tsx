@@ -13,9 +13,6 @@ export default function Generator() {
 
   const handleGeneratePlan = () => {
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
   };
 
   return (
