@@ -17,10 +17,12 @@ export default function Clients() {
         iconColor="text-amber-500"
         bgColor="bg-amber-500/10"
       />
-      <div className="flex justify-end p-4">
-        <Button>Add Client</Button>
+      <div className="px-4 lg:px-8">
+        <div className="flex justify-end py-4">
+          <Button>Add Client</Button>
+        </div>
+        <DataTable data={data} columns={columns} />
       </div>
-      <DataTable data={data} columns={columns} />
     </div>
   );
 }
