@@ -3,14 +3,14 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { useAuth } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 const font = Montserrat({ weight: "600", subsets: ["latin"] });
 
 export default function LandingNavbar() {
-  const { isSignedIn } = useAuth();
+  const { isLoaded, isSignedIn } = useUser();
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
       <Link href="/" className="flex items-center">
@@ -22,7 +22,7 @@ export default function LandingNavbar() {
         </h1>
       </Link>
       <div className="flex items-center space-x-4">
-        {isSignedIn ? (
+        {isSignedIn || isLoaded ? (
           <Link href="/dashboard">
             <Button className="text-sm md:text-lg p-4 md:p-6 rounded-full font-semibold bg-[#B03170] hover:bg-[#A02E66]">
               Dashboard
