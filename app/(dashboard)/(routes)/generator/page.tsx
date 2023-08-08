@@ -1,4 +1,4 @@
-import Generator from "@/pages/generator/Generator";
+import Generator from "@/page-components/generator/Generator";
 import React from "react";
 
 function GeneratorPage() {
