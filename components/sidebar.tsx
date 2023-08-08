@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
-import { Brain, LayoutDashboard, Settings } from "lucide-react";
+import { Brain, LayoutDashboard, Settings, Users2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -23,6 +23,12 @@ const routes = [
     icon: Brain,
     href: "/generator",
     color: "text-violet-500",
+  },
+  {
+    label: "Clients",
+    icon: Users2,
+    href: "/clients",
+    color: "text-amber-500",
   },
   {
     label: "Settings",
