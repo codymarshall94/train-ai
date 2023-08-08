@@ -1,0 +1,42 @@
+export const TESTDATA = [
+  {
+    id: 1,
+    name: "Cody Marshall",
+    email: "codymstuntsx@gmail.com",
+    lastUpdated: "08/19/2022",
+    currentPlan: false,
+    planId: "12353safdsf3",
+  },
+  {
+    id: 2,
+    name: "Alice Johnson",
+    email: "alice@example.com",
+    lastUpdated: "06/25/2022",
+    currentPlan: true,
+    planId: "8742hjdfn85",
+  },
+  {
+    id: 3,
+    name: "Bob Smith",
+    email: "bob@example.com",
+    lastUpdated: "07/12/2022",
+    currentPlan: true,
+    planId: "45327gjksdf2",
+  },
+  {
+    id: 4,
+    name: "Eve Anderson",
+    email: "eve@example.com",
+    lastUpdated: "08/03/2022",
+    currentPlan: false,
+    planId: "98765nkjfsd1",
+  },
+  {
+    id: 5,
+    name: "David Lee",
+    email: "david@example.com",
+    lastUpdated: "08/10/2022",
+    currentPlan: true,
+    planId: "63982adjsaf7",
+  },
+];
