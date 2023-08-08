@@ -1,4 +1,7 @@
+"use client";
+
 import { ColumnDef } from "@tanstack/react-table";
+import { Badge } from "../ui/badge";
 
 export type Client = {
   id: number;
@@ -25,5 +28,16 @@ export const columns: ColumnDef<Client>[] = [
   {
     accessorKey: "currentPlan",
     header: "Current Plan",
+    cell: ({ row }) => {
+      return (
+        <div className="flex items-center">
+          {row.original.currentPlan ? (
+            <Badge>Active</Badge>
+          ) : (
+            <Badge variant="secondary">Inactive</Badge>
+          )}
+        </div>
+      );
+    },
   },
 ];
