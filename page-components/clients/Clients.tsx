@@ -1,12 +1,21 @@
+"use client";
+
 import { columns } from "@/components/clients/columns";
 import { DataTable } from "@/components/clients/data-table";
 import Heading from "@/components/heading";
+import NewClientForm from "@/components/new-client-form";
 import { Button } from "@/components/ui/button";
 import { TESTDATA } from "@/data/test-data";
 import { User2 } from "lucide-react";
-import React from "react";
+import React, { useCallback, useState } from "react";
 
 export default function Clients() {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const toggleOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
+
   const data = TESTDATA;
   return (
     <div>
@@ -19,10 +28,11 @@ export default function Clients() {
       />
       <div className="px-4 lg:px-8">
         <div className="flex justify-end py-4">
-          <Button>Add Client</Button>
+          <Button onClick={toggleOpen}>Add Client</Button>
         </div>
         <DataTable data={data} columns={columns} />
       </div>
+      <NewClientForm open={open} toggleOpen={toggleOpen} />
     </div>
   );
 }
